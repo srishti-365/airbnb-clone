@@ -28,7 +28,7 @@ export const authOptions: AuthOptions = {
                 if(!credentials?.email || !credentials?.password) {
                     throw new Error('Invalid credentials');
                 }
-
+                console.log(credentials.email);
                 const user = await prisma.user.findUnique({
                     where: {
                         email: credentials.email
